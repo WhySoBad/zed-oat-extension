@@ -1,0 +1,12 @@
+name = "Oat.v1"
+grammar = "oat_v1"
+path_suffixes = ["oat"]
+line_comments = ["// "]
+tab_size = 2
+brackets = [
+    { start = "(", end = ")", close = true, newline = true },
+    { start = "{", end = "}", close = true, newline = true },
+    { start = "[", end = "]", close = true, newline = false },
+    { start = "\"", end = "\"", close = true, newline = false, not_in = ["comment", "string_literal"] },
+    { start = "'", end = "'", close = true, newline = false, not_in = ["comment", "string_literal"] },
+]
