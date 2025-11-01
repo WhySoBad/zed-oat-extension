@@ -1,0 +1,7 @@
+diff --git a/queries/oat-v1/indents.scm b/queries/oat-v1/indents.scm
+new file mode 100644
+index 0000000..5791787
+--- /dev/null
++++ b/queries/oat-v1/indents.scm
+@@ -0,0 +1 @@
++(block "}" @end) @indent

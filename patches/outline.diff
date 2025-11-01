@@ -1,0 +1,14 @@
+diff --git a/queries/oat-v1/outline.scm b/queries/oat-v1/outline.scm
+new file mode 100644
+index 0000000..c291b90
+--- /dev/null
++++ b/queries/oat-v1/outline.scm
+@@ -0,0 +1,7 @@
++(fdecl
++  rettype: (retty) @context
++  name: (identifier) @name) @item
++
++(gdecl
++    name: (identifier) @name
++    initializer: (gexp) @item)
+\ No newline at end of file

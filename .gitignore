@@ -2,6 +2,3 @@
 grammars
 extension.wasm
 languages/**/*.scm
-!languages/**/indents.scm
-!languages/**/highlights.scm
-!languages/**/outline.scm
