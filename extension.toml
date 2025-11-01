@@ -7,5 +7,5 @@ description = "Oat.v1 syntax highlighting"
 repository = "https://github.com/WhySoBad/zed-oat-v1-extension"
 
 [grammars.oat_v1]
-repository = "https://copeberg.org/wysbd/tree-sitter-oat-v1"
-commit = "32834736e35b8709ded2a718996942789482b641"
+repository = "https://github.com/WhySoBad/tree-sitter-oat-v1"
+commit = "d998915a73237f89b2f376e5d0b06ca73a1dc9aa"
