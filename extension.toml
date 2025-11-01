@@ -8,4 +8,4 @@ repository = "https://github.com/WhySoBad/zed-oat-v1-extension"
 
 [grammars.oat_v1]
 repository = "https://github.com/WhySoBad/tree-sitter-oat-v1"
-commit = "cfc2618ed1694de5ac73816d93a4ebce84e64f78"
+commit = "fa1e933ac6ceaa21932ec32f6d06a01e4383a037"
