@@ -1,5 +1,5 @@
-name = "Oat.v1"
-grammar = "oat_v1"
+name = "Oat"
+grammar = "oat"
 path_suffixes = ["oat"]
 line_comments = ["// "]
 tab_size = 2

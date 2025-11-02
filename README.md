@@ -1,6 +1,6 @@
-# zed-oat-v1-extension
+# zed-oat-extension
 
-A Zed extension which adds syntax highlighting to the Oat.v1 language. The extension is powered by the [`tree-sitter-oat-v1` grammar](https://github.com/WhySoBad/tree-sitter-oat-v1).
+A Zed extension which adds syntax highlighting to the Oat language. The extension is powered by the [`tree-sitter-oat` grammar](https://github.com/WhySoBad/tree-sitter-oat).
 
 ## Installation
 
@@ -19,13 +19,13 @@ To help developing this extension you need to install it as an dev extension. Fo
 
 All tree-sitter queries for the extension are stored as git diffs which can be patched into the tree-sitter grammar. This patching automatically happens during the build phase.
 
-To create a new query diff which can be patched, you need to copy all `.scm` files from this repository into the `tree-sitter-oat-v1/queries/oat-v1` directory or patch the diffs directly onto it.
+To create a new query diff which can be patched, you need to copy all `.scm` files from this repository into the `tree-sitter-oat/queries/oat` directory or patch the diffs directly onto it.
 
 Then, new diffs can be generated using
 ```bash
 # Create git diff for a new file
-git diff /dev/null queries/oat-v1/<path-to-query>.scm > output.diff
+git diff /dev/null queries/oat/<path-to-query>.scm > output.diff
 # Create git diff for a file which was modified
-git diff queries/oat-v1/<path-to-query>.scm > output.diff
+git diff queries/oat/<path-to-query>.scm > output.diff
 ```
 and then copied into the `patches` folder of this repository.

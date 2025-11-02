@@ -10,8 +10,8 @@ use std::{
 mod git;
 
 const REPOSITORY_PATH: &str = "tree-sitter-grammar";
-const PATCH_BRANCH: &str = "zed-oat-v1-extension-patches";
-const TEMPORARY_BRANCH: &str = "zed-oat-v1-extension-temp";
+const PATCH_BRANCH: &str = "zed-oat-extension-patches";
+const TEMPORARY_BRANCH: &str = "zed-oat-extension-temp";
 
 pub const DEBUG: Option<&str> = option_env!("DEBUG");
 
@@ -52,26 +52,26 @@ fn main() {
         Err(err) => return println!("cargo::error=unable to read extension.toml: {err}"),
     };
 
-    let oat_v1_grammar = match extension.grammars.get("oat_v1") {
+    let oat_grammar = match extension.grammars.get("oat") {
         Some(grammar) => grammar,
-        None => return println!("cargo::error=extension does not specify a oat_v1 grammar"),
+        None => return println!("cargo::error=extension does not specify a oat grammar"),
     };
 
     let repository = Git::new(Path::new(&out_dir).join(REPOSITORY_PATH));
 
     if let Err(err) = checkout_repository(
         &repository,
-        &oat_v1_grammar.repository,
-        &oat_v1_grammar.commit,
+        &oat_grammar.repository,
+        &oat_grammar.commit,
     ) {
         return println!(
-            "cargo::error=unable to checkout oat-v1 grammar {} [{}]: {}",
+            "cargo::error=unable to checkout oat grammar {} [{}]: {}",
             err.chain()
                 .map(|err| err.to_string())
                 .collect::<Vec<String>>()
                 .join(": "),
-            oat_v1_grammar.repository,
-            oat_v1_grammar.commit
+            oat_grammar.repository,
+            oat_grammar.commit
         );
     }
 
@@ -94,10 +94,10 @@ fn main() {
         }
     }
 
-    let queries = match read_dir(repository.directory().join("queries/oat-v1")) {
+    let queries = match read_dir(repository.directory().join("queries/oat")) {
         Ok(dir) => dir,
         Err(err) => {
-            return println!("cargo::error=unable to read oat-v1 grammar directory: {err}")
+            return println!("cargo::error=unable to read oat grammar directory: {err}")
         }
     };
 

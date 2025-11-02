@@ -363,7 +363,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "zed-oat-v1-extension"
+name = "zed-oat-extension"
 version = "0.1.0"
 dependencies = [
  "anyhow",
