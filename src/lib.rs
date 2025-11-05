@@ -1,11 +1,11 @@
 use zed_extension_api as zed;
 
-struct OatV1Extension;
+struct OatExtension;
 
-impl zed::Extension for OatV1Extension {
+impl zed::Extension for OatExtension {
     fn new() -> Self where Self: Sized {
         Self
     }
 }
 
-zed::register_extension!(OatV1Extension);
+zed::register_extension!(OatExtension);
