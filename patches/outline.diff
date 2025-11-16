@@ -3,7 +3,7 @@ new file mode 100644
 index 0000000..c291b90
 --- /dev/null
 +++ b/queries/oat/outline.scm
-@@ -0,0 +1,7 @@
+@@ -0,0 +1,10 @@
 +(fdecl
 +  rettype: (retty) @context
 +  name: (identifier) @name) @item
@@ -11,4 +11,7 @@ index 0000000..c291b90
 +(gdecl
 +    name: (identifier) @name
 +    initializer: (gexp) @item)
++
++(tdecl
++    name: ((struct_name) @name) @item)
 \ No newline at end of file
