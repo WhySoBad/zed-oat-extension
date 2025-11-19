@@ -1,6 +1,6 @@
 id = "oat"
 name = "Oat"
-version = "0.0.3"
+version = "0.0.4"
 schema_version = 1
 authors = ["WhySoBad <git@wysbd.dev>"]
 description = "Oat language syntax highlighting"
@@ -8,4 +8,4 @@ repository = "https://github.com/WhySoBad/zed-oat-extension"
 
 [grammars.oat]
 repository = "https://github.com/WhySoBad/tree-sitter-oat"
-commit = "579dcf4eb7d2f7fdbcb99880876afc4185d47195"
+commit = "e691fa14ea94df88fbf0701d26c67d1fa3d75dee"
