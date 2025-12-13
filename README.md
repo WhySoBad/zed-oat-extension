@@ -4,7 +4,7 @@ A Zed extension which adds syntax highlighting to the Oat language. The extensio
 
 ## Installation
 
-Currently, the extension is not yet added to the official zed extension catalog. Therefore, the extension needs to be [installed manually as a dev extension](https://zed.dev/docs/extensions/developing-extensions#developing-an-extension-locally).
+The extension is added to the official zed extension catalog, simply search after an extension named *Oat* and install it.
 
 ## Setup
 
